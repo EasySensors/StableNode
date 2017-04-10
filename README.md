@@ -56,7 +56,7 @@ Arduino Pins|	Description
 #define MY_RADIO_NRF24|	Define the radio we use – here is nRF24L01+ 2.4 GHz Radio 
 #define MY_NODE_ID 0xE0 | Define Node address (0xE0 here). I prefer to use static addresses<br> and in Hexadecimal since it is easier to identify the node<br> address in  [Domoticz](https://domoticz.com/) devices list after it<br> will be discovered by controller ( [Domoticz](https://domoticz.com/)).<br> However, you can use AUTO instead of the hardcoded number<br> (like 0xE0) though.  [Domoticz](https://domoticz.com/) will automatically assign node ID then.
 
-Connect the Node to FTDI USB adaptor, Select Pro Mini 8MHz board in Arduino IDE and upload the ButtonSizeNode.ino sketch.
+Connect the Node to FTDI USB adaptor, Select Pro Mini 8MHz board in Arduino IDE and upload the StableNode.ino sketch.
 
 **Done**
 
@@ -67,7 +67,7 @@ The board is created by  [Koresh](https://www.openhardware.io/user/143/projects/
 
 ![enter image description here](https://github.com/EasySensors/StableNode/blob/master/pics/StableNodeSchematic.jpg?raw=true)
 
-[**The board schematics Pdf link**](https://github.com/EasySensors/ButtonSizeNode/blob/master/pdf/ButtonSizeNode_ext1.pdf)
+[**The board schematics Pdf link**](https://github.com/EasySensors/StableNode/blob/master/pdf/StableNodeSchematic.PDF)
 
 
 P.S. Always mind! if your Arduino code fails you need some backup plan. Put some candles and matches in your bathroom )))))... hope you understand. Start your automation wisely. Like auotomate your doghouse first. Then checkenshed and so on!!!
