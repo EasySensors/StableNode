@@ -67,7 +67,7 @@ The board is created by  [Koresh](https://www.openhardware.io/user/143/projects/
 
 ![enter image description here](https://github.com/EasySensors/StableNode/blob/master/pics/StableNodeSchematic.jpg?raw=true)
 
-[**The board schematics Pdf link**](https://github.com/EasySensors/StableNode/blob/master/pdf/StableNodeSchematic.PDF)
+[**The board schematics Pdf link**](https://github.com/EasySensors/StableNode/blob/master/pdf/Schematic__1_03.PDF)
 
 
 P.S. Always mind! if your Arduino code fails you need some backup plan. Put some candles and matches in your bathroom )))))... hope you understand. Start your automation wisely. Like auotomate your doghouse first. Then checkenshed and so on!!!
