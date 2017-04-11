@@ -63,7 +63,7 @@ Connect the Node to FTDI USB adaptor, Select Pro Mini 8MHz board in Arduino IDE 
 The board is created by  [Koresh](https://www.openhardware.io/user/143/projects/Koresh)
 
 
->For schematics lovers:
+>Schematic:
 
 ![enter image description here](https://github.com/EasySensors/StableNode/blob/master/pics/StableNodeSchematic.jpg?raw=true)
 
