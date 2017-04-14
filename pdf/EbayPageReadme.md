@@ -26,8 +26,6 @@ D2, D9, D10, D11,D12, D13 |	Connected to nRF24L01+ 2.4 GHz Radio
 D3, D4, D5, D6, D7, D8 |	Available ARDUINO digital GPIO
 Bat+ | Unregulated power up to 6.5 Volts
 Bat- | Ground
-Scissors line | you cat cut with scissors, sensors and battery holder part, if you need just controller and radio
-
 
 **Arduino IDE Settings**
 
