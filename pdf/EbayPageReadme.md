@@ -1,34 +1,73 @@
+**The StableNode is a low cost wireless Arduino IDE compatible (the Atmel ATMega328P 8MHz) microcontroller with The Nordic nRF24L01+ 2.4 GHz Radio transceiver on board.** 
+------------------------------------------------------------------------
+
+Best sutable for Home Automation, IOT. Could be used as core board for radio controlling any DIY project. Accurate designed RF subsystem based on NRF24L01+ chip with optimal tunned pcb antenna
+
+![enter image description here](https://github.com/EasySensors/StableNode/blob/master/pics/StableNode.jpg?raw=true)
+![enter image description here](https://github.com/EasySensors/StableNode/blob/master/pics/StableNode2.jpg?raw=true)
 
 
-### The ButtonSize Node is a low cost wireless Arduino IDE compatible (the Atmel ATMega328P) microcontroller with RFM 69 CW or HW 433 MHz radio on board and build in Temperature, Humidity and Light sensors. Best sutable for Home Automation, IOT. Could be used as universal sensor board for radio controlling any DIY project.
-
-## Features
-- Fully compatible with the Arduino IDE (PRO MINI 8 MG Hz)
-- Dimensions 42.2mm x 20.9mm or if you cut sensor part of the board it is just 20.9mm x 20.9mm
-- Temperature and humidity sensor Si7021
-- Light sensor BH1750, spectral responsibility is approximately human eye response.
-- Over the Air, firmware updates (OTA) ready. In combination with preprogrammed Dual Optiboot boot loader and External JDEC  EPROM\Flash memory chip on board the Node allows OTA software updates.
-- Onboard RFM69-HW (high power version) or CW (low power consumption version) 433 MHz Radio transceiver  with wire antenna
-- Onboard Atmel ATSHA204A CryptoAuthentication chip makes communication with the Node very secured. ATSHA204A implements secured handshake and if handshake fails the Node will not executing any command sent to it
-- Programming header is FTDI, TTL Serial. For programming you need to have  USB TTL Serial – FTDI adaptor
-- ENIG Emersion Gold finish
-- MySensors compatible. You can use superb set of scripts and libraries from [mysensors.org](http://www.mysensors.org) project  and convert the node into reliable network of little home sensors, relays and actuators.
-- Battery connector CR2032 
-- You can cut with scissors, sensors and battery holder part of the board, if you need just controller and radio
-- Yes, it is open sourced. Completely
-
-Comes with Arduino example sketch and guide to IOT, Smarthome ideas.
-
-If you plan to use the Node battery powered, you need CW version radio on board. HW version is longer range but will eat battery pretty fast. Plase send me message stating which radio type you need in your order.
-
-## Overview
-If you are familiar with Arduino boards, the ButtonSize Node is Arduino pro Mini with onboard HopeRF RFM69-CW or HW 433 MHz radio, external EPROM flash and crypto authentication chip. To save some board dimensions the ButtonSize Node does not have onboard USB-Serial converter. You need to buy FTDI Adapter for programming. HopeRF RFM69-HW provide extremely good range. HopeRF RFM69-CW version will have half of that range but still many hundreed meters in open area. External Flash chip allows to burn Arduino sketch wirelessly. Onboard Atmel ATSHA204A CryptoAuthentication chip secures communication with other controllers. Some IOT ideas based on the ButtonSize node and similar controllers plus complete specs you may find here [my GitHub page](https://github.com/EasySensors/ButtonSizeNode)
-
-
-![enter image description here](https://github.com/EasySensors/ButtonSizeNode/blob/master/pics/bs1.jpg?raw=true)
-![enter image description here](https://github.com/EasySensors/ButtonSizeNode/blob/master/pics/bs2.jpg?raw=true)
+## Specification: ##
+ - Dimensions 59mm x 18mm
+ - The Nordic nRF24L01+ 2.4 GHz Radio transceiver on board
+ - Supply voltage up to 6.5 Volts
+ - The Digital and Analog pins are 5 volts
+ - 4 battery connector pins
+ - FTDI  header for programming
  
-Package Content:
-•	The Controller board 1 pcs  
 
-  
+**Pin out:** 
+
+
+Arduino Pins|	Description
+------------|--------------
+A0, A2, A3, A4, A5, A6,  A7 |	Available ARDUINO analog GPIO / DIGITAL GPIO
+D2, D9, D10, D11,D12, D13 |	Connected to nRF24L01+ 2.4 GHz Radio 
+D3, D4, D5, D6, D7, D8 |	Available ARDUINO digital GPIO
+Bat+ | Unregulated power up to 6.5 Volts
+Bat- | Ground
+Scissors line | you cat cut with scissors, sensors and battery holder part, if you need just controller and radio
+
+
+**Arduino IDE Settings**
+
+![Arduino IDE Settings](https://github.com/EasySensors/ButtonSizeNode/blob/master/pics/IDEsettings.jpg?raw=true)
+
+
+How to use it as home automation (IOT) node controller
+------------------------------------------------------
+
+
+StableNode.ino is the Arduino example sketch using [MySensors](https://www.mysensors.org/) API. 
+
+- **Controller Setup.**  
+Burn the StableNode.ino sketch into the board and it will became  one of the MySensors home automation network Sensor's Node. 
+To create the home automation network you need smarthome controller and at least two Nodes one as a Sensor, a Relay or an Actuator Node and the other one as the “Gateway Serial” connected to a smarthome controller. I personally love [Domoticz](https://domoticz.com/) as a smarthome controller. Please check this [HowTo](https://github.com/EasySensors/ButtonSizeNode/blob/master/DomoticzInstallMySensors.md) to install Domoticz.
+
+- **No Controller setup.** 
+However, for no-controller setup, as example, you can use 3 nodes - first node as the “Gateway Serial”, second node as a Relay and last one as a Switch for that Relay. No controller needed then, keep the Switch and the Relay on the same address and the switch will operate the relay. 
+
+
+Things worth mentioning about the  [MySensors](https://www.mysensors.org/) Arduino sketch: 
+
+
+Arduino Pins|	Description
+------------|--------------
+#define MY_RADIO_NRF24|	Define the radio we use – here is nRF24L01+ 2.4 GHz Radio 
+#define MY_NODE_ID 0xE0 | Define Node address (0xE0 here). I prefer to use static addresses<br> and in Hexadecimal since it is easier to identify the node<br> address in  [Domoticz](https://domoticz.com/) devices list after it<br> will be discovered by controller ( [Domoticz](https://domoticz.com/)).<br> However, you can use AUTO instead of the hardcoded number<br> (like 0xE0) though.  [Domoticz](https://domoticz.com/) will automatically assign node ID then.
+
+Connect the Node to FTDI USB adaptor, Select Pro Mini 8MHz board in Arduino IDE and upload the StableNode.ino sketch.
+
+**Done**
+
+The board is created by  [Koresh](https://www.openhardware.io/user/143/projects/Koresh)
+
+
+>Schematic:
+
+![enter image description here](https://github.com/EasySensors/StableNode/blob/master/pics/StableNodeSchematic.jpg?raw=true)
+
+[**The board schematics Pdf link**](https://github.com/EasySensors/StableNode/blob/master/pdf/Schematic__1_03.PDF)
+
+
+P.S. Always mind! if your Arduino code fails you need some backup plan. Put some candles and matches in your bathroom )))))... hope you understand. Start your automation wisely. Like auotomate your doghouse first. Then checkenshed and so on!!!
