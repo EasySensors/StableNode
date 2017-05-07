@@ -11,6 +11,7 @@ Best sutable for Home Automation, IOT. Could be used as core board for radio con
  - The Nordic nRF24L01+ 2.4 GHz Radio transceiver on board
  - Supply voltage up to 6.5 Volts
  - The Digital and Analog pins are 5 volts
+ - ATMega328P frequency is 8 Mhz 
  - 4 battery connector pins
  - FTDI  header for programming
  
