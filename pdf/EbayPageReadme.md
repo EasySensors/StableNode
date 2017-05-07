@@ -16,17 +16,6 @@ Best sutable for Home Automation, IOT. Could be used as core board for radio con
  - FTDI  header for programming
  
 
-**Pin out:** 
+## Package Content:
 
-
-Arduino Pins|	Description
-------------|--------------
-A0, A2, A3, A4, A5, A6,  A7 |	Available ARDUINO analog GPIO / DIGITAL GPIO
-D2, D9, D10, D11,D12, D13 |	Connected to nRF24L01+ 2.4 GHz Radio 
-D3, D4, D5, D6, D7, D8 |	Available ARDUINO digital GPIO
-Bat+ | Unregulated power up to 6.5 Volts
-Bat- | Ground
-
-**Arduino IDE Settings**
-
-![Arduino IDE Settings](https://github.com/EasySensors/ButtonSizeNode/blob/master/pics/IDEsettings.jpg?raw=true)
+The Switch Node Controller board 1 pcs
