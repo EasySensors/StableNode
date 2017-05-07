@@ -3,7 +3,6 @@
 
 Best sutable for Home Automation, IOT. Could be used as core board for radio controlling any DIY project. Accurate designed RF subsystem based on NRF24L01+ chip with optimal tunned pcb antenna
 
-![enter image description here](https://github.com/EasySensors/StableNode/blob/master/pics/StableNode.jpg?raw=true)
 ![enter image description here](https://github.com/EasySensors/StableNode/blob/master/pics/StableNode2.jpg?raw=true)
 
 
