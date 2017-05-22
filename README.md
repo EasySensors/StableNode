@@ -49,7 +49,7 @@ However, for no-controller setup, as example, you can use 3 nodes - first node a
 Things worth mentioning about the  [MySensors](https://www.mysensors.org/) Arduino sketch: 
 
 
-Arduino Pins|	Description
+Code |	Description
 ------------|--------------
 #define MY_RADIO_NRF24|	Define the radio we use – here is nRF24L01+ 2.4 GHz Radio 
 #define MY_NODE_ID 0xE0 | Define Node address (0xE0 here). I prefer to use static addresses<br> and in Hexadecimal since it is easier to identify the node<br> address in  [Domoticz](https://domoticz.com/) devices list after it<br> will be discovered by controller ( [Domoticz](https://domoticz.com/)).<br> However, you can use AUTO instead of the hardcoded number<br> (like 0xE0) though.  [Domoticz](https://domoticz.com/) will automatically assign node ID then.
